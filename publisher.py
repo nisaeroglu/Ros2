@@ -13,7 +13,7 @@ class NumberPublisher(Node):
         msg = Int32MultiArray()
         msg.data = [random.randint(1, 1000) for _ in range(5)]
         self.publisher_.publish(msg)
-        self.get_logger().info(f'Yayınlandı: {msg.data}')
+        self.get_logger().info(f'sayılar: {msg.data}')
 
 def main(args=None):
     rclpy.init(args=args)
